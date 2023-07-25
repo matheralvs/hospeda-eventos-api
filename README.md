@@ -8,6 +8,20 @@
 
 <p align="center">Este projeto se trata da API Rest da aplicação Hospeda Eventos.</p>
 
+## 🚀 Tecnologias
+
+Tecnologias que usei para desenvolver a aplicação:
+
+- [NodeJS](https://nodejs.org/)
+
+- [PrismaJS](https://www.prisma.io/docs)
+
+- [Express](https://expressjs.com/pt-br/)
+
+- [Zod](https://zod.dev/)
+
+- [Typescript](https://www.typescriptlang.org/)
+
 ## 💻 Como começar
 
 ### 1. Instalação
