@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id          String   @id @default(uuid())
+  name        String
+  privacy     String
+  description String?
+  initialDate DateTime
+  initialTime String
+  addresses   Address?
+
+  @@map("events")
+}
+
+model Address {
+  id           String  @id @default(uuid())
+  zipCode      String
+  number       String
+  street       String?
+  complement   String?
+  neighborhood String
+  city         String
+  state        String
+  event        Event   @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  eventId      String  @unique
+
+  @@map("addresses")
+}
