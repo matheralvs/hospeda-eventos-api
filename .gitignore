@@ -1,0 +1,8 @@
+#Application
+node_modules
+
+#Enviroments
+.env
+
+#Database
+prisma/**/*.db
