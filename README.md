@@ -24,13 +24,21 @@ Tecnologias que usei para desenvolver a aplicação:
 
 ## 💻 Como começar
 
-### 1. Instalação
+### 1. Clone o projeto e acesse a pasta
+
+    git clone https://github.com/matheralvs/hospeda-eventos-api.git && cd hospeda-eventos-api
+
+### 1. Instalar dependências
 
     npm install
 
-### 2. Renomear: `.env.example` para: `.env`
+### 2. Rodar as migrations do prisma
 
-### 3. Inicializar o app
+    npx prisma migrate dev
+
+### 3. Renomear: `.env.example` para: `.env`
+
+### 4. Inicializar o app
 
     npm run dev
 
