@@ -8,6 +8,12 @@ export class ShowEventController implements Controller {
     try {
       const { id } = request.params;
 
+      const eventWithId = await eventRepository.findById(id);
+
+      if (!eventWithId) {
+        return response.status(404).json({ message: "Event not found" });
+      }
+
       const event = await eventRepository.show(id);
 
       let eventWithAddress;
